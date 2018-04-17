@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.util.Date;
 
 @Entity
 @Table(name = "products")
@@ -16,9 +17,6 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    /*@Column(name = "expiration_date")
-    @DateFormat (pattern = "yyyy-MM-dd" )
-    private Date expirationDate;*/
 
 
 
