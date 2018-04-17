@@ -22,7 +22,6 @@ public class ProductService {
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ResponseBody
     public Iterable<Product> getAllProducts() {
-        Iterable<Product> iter = productRepository.findAll();
         return productRepository.findAll();
     }
 
