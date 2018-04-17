@@ -17,12 +17,15 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
+
+    @CrossOrigin
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ResponseBody
     public Iterable<Product> getAllProducts() {
         Iterable<Product> iter = productRepository.findAll();
         return productRepository.findAll();
     }
+
 
     @RequestMapping(value = "/create", method = RequestMethod.POST,consumes = MediaType.APPLICATION_JSON_VALUE)
     @ResponseStatus(HttpStatus.CREATED)
