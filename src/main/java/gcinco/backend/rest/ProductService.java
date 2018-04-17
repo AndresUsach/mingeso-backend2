@@ -21,10 +21,6 @@ public class ProductService {
     @ResponseBody
     public Iterable<Product> getAllProducts() {
         Iterable<Product> iter = productRepository.findAll();
-        for (Product product: iter
-                ) {
-            System.out.println("name: " + product.getName());
-        }
         return productRepository.findAll();
     }
 
