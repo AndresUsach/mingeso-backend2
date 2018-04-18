@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 //@CrossOrigin(origins = "http://localhost:8085")
+@CrossOrigin
 @RestController
 @RequestMapping("/products")
 public class ProductService {
@@ -18,7 +19,7 @@ public class ProductService {
     private ProductRepository productRepository;
 
 
-    @CrossOrigin
+
     @RequestMapping(value = "/list",method = RequestMethod.GET)
     @ResponseBody
     public Iterable<Product> getAllProducts() {
