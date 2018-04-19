@@ -7,7 +7,7 @@ services:
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
       - MARIADB_USER=bn_testlink
-      - MARIADB_DATABASE=mg52018
+      - MARIADB_DATABASE=bitnami_testlink
     volumes:
       - /root/containers_data/mariadb_data:/bitnami
     ports:
