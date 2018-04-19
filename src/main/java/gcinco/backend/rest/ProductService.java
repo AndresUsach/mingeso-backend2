@@ -44,9 +44,9 @@ public class ProductService {
         product.setPrice(resource.getPrice());
         productRepository.save(product);
     }
-    
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     @ResponseBody
-    @DeleteMapping(value = "/delete/{id}")
     public void delete(@PathVariable("id") Integer id) {
         Product product = productRepository.findById(id).get();
         productRepository.delete(product);
