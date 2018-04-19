@@ -10,6 +10,8 @@ services:
       - MARIADB_DATABASE=mg52018
     volumes:
       - /root/containers_data/mariadb_data:/bitnami
+    ports:
+      - '3310'
     expose:
       - "3310"
 
