@@ -10,8 +10,10 @@ services:
       - MARIADB_DATABASE=bitnami_testlink
     volumes:
       - /root/containers_data/mariadb_data:/bitnami
+    ports:
+      - 3307
     expose:
-      - "3306"
+      - "3307"
 
   testlink:
     image: bitnami/testlink:latest
@@ -24,7 +26,7 @@ services:
       - testlink-db
     environment:
       - MARIADB_HOST=testlink-db
-      - MARIADB_PORT_NUMBER=3306
+      - MARIADB_PORT_NUMBER=3307
       - TESTLINK_DATABASE_USER=bn_testlink
       - TESTLINK_DATABASE_NAME=bitnami_testlink
       - ALLOW_EMPTY_PASSWORD=yes
