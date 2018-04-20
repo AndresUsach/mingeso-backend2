@@ -12,7 +12,6 @@ services:
       - /root/containers_data/mariadb_data:/bitnami
     expose:
       - "3306"
-
   testlink:
     image: bitnami/testlink:latest
     ports:
@@ -31,4 +30,8 @@ services:
       - TESTLINK_USERNAME=admin
       - TESTLINK_PASSWORD=mg52018
       - TESTLINK_EMAIL=admin@example.com
-
+volumes:
+  mariadb_data:
+    driver: local
+  testlink_data:
+    driver: local
