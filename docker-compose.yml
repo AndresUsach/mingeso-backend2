@@ -1,4 +1,4 @@
-version: '3'
+version: '2'
 
 services:
   testlink-db:
@@ -33,6 +33,6 @@ services:
 
 volumes:
   mariadb_data:
-    driver: local
+
   testlink_data:
-    driver: local
+
