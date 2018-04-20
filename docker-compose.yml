@@ -1,8 +1,8 @@
-version: '2'
+version: '3'
 
 services:
   testlink-db:
-    image: bitnami/mariadb:latest
+    image: 'bitnami/mariadb:latest'
     user: root
     environment:
       - ALLOW_EMPTY_PASSWORD=yes
@@ -13,9 +13,9 @@ services:
     expose:
       - "3306"
   testlink:
-    image: bitnami/testlink:latest
+    image: 'bitnami/testlink:latest'
     ports:
-      - 7070:80
+      - 8089:80
       - 443:443
     volumes:
       - /home/containers_data/testlink_data:/bitnami
@@ -28,8 +28,9 @@ services:
       - TESTLINK_DATABASE_NAME=bitnami_testlink
       - ALLOW_EMPTY_PASSWORD=yes
       - TESTLINK_USERNAME=admin
-      - TESTLINK_PASSWORD=mg52018
+      - TESTLINK_PASSWORD=admin
       - TESTLINK_EMAIL=admin@example.com
+
 volumes:
   mariadb_data:
     driver: local
