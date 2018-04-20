@@ -2,7 +2,7 @@ version: '2'
 
 services:
    testlink-db:
-   image: 'bitnami/mariadb:latest'
+   image: bitnami/mariadb:latest
    user: root
    environment:
       - ALLOW_EMPTY_PASSWORD=yes
@@ -12,7 +12,7 @@ services:
       - /root/containers_data/mariadb_data:/bitnami
 
    testlink:
-   image: 'bitnami/testlink:latest'
+   image: bitnami/testlink:latest
    ports:
       - 7070:80
       - 443:443
@@ -30,6 +30,10 @@ services:
       - TESTLINK_PASSWORD=mg52018
       - TESTLINK_EMAIL=admin@example.com
 
-
+   sonarqube:
+   image: sonarqube
+   ports:
+      - "9000:9000"
+      - "9092:9092"
 
 
