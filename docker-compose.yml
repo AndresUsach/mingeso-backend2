@@ -10,12 +10,11 @@ services:
       - MARIADB_DATABASE=bitnami_testlink
     volumes:
       - /root/containers_data/mariadb_data:/bitnami
-    expose:
-      - "3306"
+
   testlink:
     image: 'bitnami/testlink:latest'
     ports:
-      - 8089:80
+      - 7070:80
       - 443:443
     volumes:
       - /home/containers_data/testlink_data:/bitnami
@@ -28,7 +27,7 @@ services:
       - TESTLINK_DATABASE_NAME=bitnami_testlink
       - ALLOW_EMPTY_PASSWORD=yes
       - TESTLINK_USERNAME=admin
-      - TESTLINK_PASSWORD=admin
+      - TESTLINK_PASSWORD=mg52018
       - TESTLINK_EMAIL=admin@example.com
 
 volumes:
