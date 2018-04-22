@@ -8,11 +8,7 @@ CREATE TABLE `products` (
 
   `name` varchar(50) DEFAULT NULL, 
 
-<<<<<<< HEAD
   `expiration_date` datetime DEFAULT NULL,
-=======
-  #`expirationDate` date DEFAULT NULL,
->>>>>>> b91cf446b06677dcf51971e3f586bb89db53145f
 
   `category` varchar(10) DEFAULT NULL, 
 
