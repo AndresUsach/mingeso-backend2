@@ -8,7 +8,7 @@ CREATE TABLE `products` (
 
   `name` varchar(50) DEFAULT NULL, 
 
-  #`expiration_date` date DEFAULT NULL,
+  #`expirationDate` date DEFAULT NULL,
 
   `category` varchar(10) DEFAULT NULL, 
 

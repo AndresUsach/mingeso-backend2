@@ -40,7 +40,7 @@ public class ProductService {
     public void update(@PathVariable("id") Integer id,  @RequestBody Product resource) {
         Product product = productRepository.findById(id).get();
         product.setName(resource.getName());
-        product.setExpiration_date(resource.getExpiration_date());
+        product.setExpirationDate(resource.getExpirationDate());
         product.setCategory(resource.getCategory());
         product.setPrice(resource.getPrice());
         productRepository.save(product);

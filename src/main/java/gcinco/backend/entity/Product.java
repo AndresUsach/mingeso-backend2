@@ -14,12 +14,10 @@ public class Product {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "expiration_date")
+    @Column(name = "expirationDate")
     @Temporal(TemporalType.DATE)
-    private Date expiration_date;
-
-
-
+    private Date expirationDate;
+    
     @Column(name = "category")
     private String category;
 
@@ -42,12 +40,12 @@ public class Product {
         this.name = name;
     }
 
-    public Date getExpiration_date() {
-        return expiration_date;
+    public Date getExpirationDate() {
+        return expirationDate;
     }
 
-    public void setExpiration_date(Date expiration_date) {
-        this.expiration_date = expiration_date;
+    public void setExpirationDate(Date expirationDate) {
+        this.expirationDate = expirationDate;
     }
 
     public String getCategory() {
