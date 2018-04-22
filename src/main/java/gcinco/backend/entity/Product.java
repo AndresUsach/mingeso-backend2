@@ -1,9 +1,7 @@
 package gcinco.backend.entity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Table(name = "products")
@@ -16,6 +14,9 @@ public class Product {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "expiration_date")
+    @Temporal(TemporalType.DATE)
+    private Date expiration_date;
 
 
 
@@ -39,6 +40,14 @@ public class Product {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Date getExpiration_date() {
+        return expiration_date;
+    }
+
+    public void setExpiration_date(Date expiration_date) {
+        this.expiration_date = expiration_date;
     }
 
     public String getCategory() {
