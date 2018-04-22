@@ -17,7 +17,7 @@ public class Product {
     @Column(name = "expirationDate")
     @Temporal(TemporalType.DATE)
     private Date expirationDate;
-    
+
     @Column(name = "category")
     private String category;
 
