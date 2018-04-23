@@ -2,4 +2,4 @@
 - Andrés Muñoz
 - Diego Mellis
 - Leiser Mahu
-- Barbara Sarmiento
+- Bárbara Sarmientom
